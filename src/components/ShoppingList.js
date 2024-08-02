@@ -14,11 +14,11 @@ const itemsToDisplay= items.filter((item)=>{
     return item.category===selectedCategory
   }
 })
-const  itemList= itemsToDisplay.map((items) =>( 
-  <li key={items.id}>
-  {items.category}
-  </li>
-))
+// const  itemList= itemsToDisplay.map((item) =>( 
+//   <li key={item.id}>
+//   {item.name} | {item.category} |
+//   </li>
+// ))
   return (
     <div className="ShoppingList">
       <div className="Filter">
@@ -31,7 +31,7 @@ const  itemList= itemsToDisplay.map((items) =>(
       </div>
       <ul className="Items">
        
-        {items.map((item) => (
+        {itemsToDisplay.map((item) => (
           <Item key={item.id} name={item.name} category={item.category} />
         ))}
       </ul>
